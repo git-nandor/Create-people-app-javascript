@@ -24,9 +24,9 @@ Person.prototype.selfInitializer = function (attributeNames, attributeValues) {
     var attributeNameCollection = attributeNames.split(' ');
     
     // Create and set the attributes fields
-    for (var i = 0; i < attributeNameCollection.length; i++) {
-        this[attributeNameCollection[i]] = attributeValues[i];
-    }
+    attributeNameCollection.forEach((current, index) => {
+        this[current] = attributeValues[index];
+    });
 }
 
 // Person object constructor 
